@@ -22,6 +22,28 @@ Content-Type: application/json
     }
   }
 }
+###
+POST http://localhost:4000/validate-rule
+Content-Type: application/json
+
+{
+  "rule": {
+    "field": "missions.count",
+    "condition": "eq",
+    "condition_value": 30
+  },
+  "data": {
+    "name": "James Holden",
+    "crew": "Rocinante",
+    "age": 34,
+    "position": "Captain",
+    "missions": {
+      "count": 30,
+      "successful": 44,
+      "failed": 1
+    }
+  }
+}
 
 ###
 POST http://localhost:4000/validate-rule
