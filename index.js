@@ -6,7 +6,7 @@ const checkIfRuleAndDataExist = require('./middlewares/checkIfRuleAndDataExist')
 // Pass Json Data 
 app.use(express.json())
 
-const PORT = 4000
+const port = 4000
 
 // Base route
 app.get('/', (req, res) => {
@@ -29,6 +29,6 @@ app.post('/validate-rule', checkIfRuleAndDataExist, checkRuleField)
 // End Validate Api Endpoint
 
 
-app.listen(PORT || process.env.PORT, (req, res) =>{
+app.listen(port || process.env.PORT, (req, res) =>{
     console.log("Server Started Successfully")
 })
