@@ -8,7 +8,7 @@ function ruleCheck(rule){
     }
     if(!rule.field){
         return res.status(400).json({
-            "message": "[rule.field] is required.",
+            "message": `${rule.field} is required.`,
             "status": "error",
             "data": null
           })
